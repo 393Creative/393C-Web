@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(10, 10, 10);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+  }
+  
+  .link{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    display: block;
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(2em, 8vw, 7em);
+    padding: clamp(0.25em, 1vw, 1em) clamp(1em, 4vw, 4em);
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .link:hover:before {
+    transition: width 600ms ease;
+    width: 100%
+  }
+  
+  .link:before{
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--blue) var(--light-blue-percent),
+      var(--light-blue)
+    );
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+  }
+  
+  .link:nth-child(4) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  :root {
+    --blue: rgb(255,140,0);
+    --light-blue: rgb(255,99,71);
+  }
